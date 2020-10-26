@@ -1,0 +1,37 @@
+<! DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title> Loteria </title>
+</head>
+		<body>
+    	<input id = "txtEntrada1" type = "número" nome verificado = "num" />
+    	<input id = "txtEntrada2" type = "number" name = "num" />
+    <input id = "txtEntrada3" type = "number" name = "num" />
+    <input id = "txtEntrada4" type = "number" name = "num" />
+    	<input id = "txtEntrada5" type = "number" name = "num" />
+    	<input id = "txtEntrada6" type = "number" name = "num" />
+
+
+    <button onclick = "calculo ()"> Resultado </button>
+   			 <script>
+        function calculo () {
+var entrada = document.getElementsByName ("num")
+console.log (entrada)
+for (var contador = 0; contador <entrada.length; contador ++) {
+    	var numeroacontingente = Math.floor (Math.random () * 60 + 1)
+    	console.log (numeroacontingente)
+           if (entrada [contador] .value == numerocontingente) { 
+            console.log ("Parabéns você acertou")
+        }
+        outro{
+            console.log ("Que Pena, você errou")
+        }
+ }
+}
+   		 	</script>
+		</body>
+
+</html>
