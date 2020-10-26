@@ -1,0 +1,72 @@
+<! DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title> exercicio3 </title>
+</head>
+	<body>
+   
+<p> escolha 1 produto </p>
+	<input type = "radio" id = "opcao1" name = "vendas" c value = 100>
+<label for = "opcao1"> Produto 1 é 100 reais </label> <br>
+	<input type = "radio" id = "opcao2" name = "vendas" value = "200">
+<label for = "opcao2"> Produto 2 é 200 reais </label> <br>
+	<input type = "radio" id = "opcao3" name = "vendas" value = "300">
+<label for = "opcao3"> Produto 3 é 300 reais </label>    
+
+<p> A compra vai ser: </p>
+	<input type = "radio" id = "avista" name = "compra" value = "0.1">
+<label for = "avista"> A vista com desconto de 10% </label> <br> <br>
+	<input type = "radio" id = "debito" name = "compra" value = "0.05">
+<label for = "debito"> Sem cartão de debito um deconto de 5% </label> <br>
+	<input type = "radio" id = "credito1" name = "compra" value = "0">
+<label for = "credito1"> No cartão de credito: 1 vez sem juros </label>   
+<br> <input type = "radio" id = "credito2" name = "compra" value = "0,5">
+<label for = "credito2"> No cartão de credito: 2 vez com 5% de juros </label> 
+<br> <button onclick = "teste ()"> finalizar </button>
+<script>
+    function teste () {
+   var opcao = document.getElementsByName ("vendas");
+    	 var compras = document.getElementsByName ("compra");
+   var resultado1 = 0
+   	 var resultado2 = 0
+   var resultado = 0
+   	 var resultadofinal = 0
+    console.log (compras);
+    console.log (opcao);
+    for (var contador = 0; contador <opcao.length; contador ++) {
+        if (opcao [contador] .checked) {
+            console.log (opcao [contador] .value)
+            resultado1 = opcao [contador] .value
+        }
+    }
+    for (var contador = 0; contador <compras.length; contador ++) {
+        if (compras [contador] .checked) {
+            console.log (compras [contador] .value)
+            resultado2 = compras [contador] .value
+        }
+   if (compras [contador] = 0) {
+     resultado = parseFloat (resultado1) * parseFloat (resultado2)
+    	 resultadofinal = parseFloat (resultado1) - resultado
+   }
+   else if (compras [contador] = 1) {
+     resultado = parseFloat (resultado1) * parseFloat (resultado2)
+     	resultadofinal = parseFloat (resultado1) - resultado
+   }
+   else if (compras [contador] = 2) {
+     resultado = parseFloat (resultado1) * parseFloat (resultado2)
+    	 resultadofinal = parseFloat (resultado1) - resultado
+   }
+   else if (compras [contador] = 3) {
+     resultado = parseFloat (resultado1) * parseFloat (resultado2)
+    	 resultadofinal = parseFloat (resultado1) + resultado
+   }
+ 
+
+    }
+    
+	</script>
+		</body>
+
+</html>
